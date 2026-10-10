@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techstruct | Madonna Nasser Portfolio</title>
+
+  <style>
+    :root {
+      --dark: #34263D;
+      --pink: #C68CA5;
+      --light: #F4EAF0;
+      --lilac: #D8C7E8;
+      --white: #FFFFFF;
+      --muted: #776A7C;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #FBF8FA;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      padding: 22px 0;
+      border-bottom: 1px solid #EADFE7;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--pink);
+    }
+
+    .back-link {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 85px 0 75px;
+      background:
+        radial-gradient(circle at 90% 15%, #E7D7EE 0, transparent 32%),
+        linear-gradient(135deg, #F4EAF0, #FBF8FA 70%);
+    }
+
+    .eyebrow {
+      color: #98627D;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--pink);
+    }
+
+    .hero p {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--dark);
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid #D8C7D5;
+      background: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-label {
+      color: #98627D;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.8px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(27px, 4vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid #EEE4EB;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 12px 40px rgba(52,38,61,0.04);
+    }
+
+    .responsibilities {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .responsibility {
+      padding: 18px;
+      background: #FBF7FA;
+      border: 1px solid #F0E5EC;
+      border-radius: 15px;
+      font-weight: 700;
+    }
+
+    .responsibility span {
+      display: block;
+      color: var(--pink);
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .links a {
+      padding: 11px 16px;
+      border: 1px solid #E4D5E0;
+      border-radius: 11px;
+      font-size: 14px;
+      font-weight: 700;
+      background: white;
+    }
+
+    .links a:hover {
+      background: var(--light);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .gallery-card {
+      min-height: 230px;
+      border: 1px dashed #CBA8BC;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #F4EAF0, #EEE7F5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #71566C;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-card .placeholder {
+      padding: 20px;
+    }
+
+    .gallery-card strong {
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .gallery-card small {
+      font-size: 12px;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .result-card {
+      background: var(--dark);
+      color: white;
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+    .result-card p {
+      color: #E8DCE9;
+      font-size: 14px;
+    }
+
+    .result-card strong {
+      display: block;
+      color: var(--lilac);
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 16px;
+    }
+
+    footer {
+      padding: 30px 0;
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        padding: 60px 0;
+      }
+
+      .responsibilities,
+      .gallery,
+      .results {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 21px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">
+        MADONNA<span>.</span>
+      </a>
+      <a class="back-link" href="../index.html#experience">
+        ← Back to Portfolio
+      </a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Selected Project · B2B Marketing</div>
+
+      <h1>Building a stronger digital presence for <span>Techstruct.</span></h1>
+
+      <p>
+        End-to-end digital marketing and LinkedIn management for a technical
+        training partner that connects training organizations with expert
+        technical instructors.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary"
+           href="https://www.linkedin.com/company/techstruct-training"
+           target="_blank" rel="noopener noreferrer">
+          Visit Techstruct LinkedIn ↗
+        </a>
+
+        <a class="btn btn-secondary" href="#my-work">
+          Explore My Work ↓
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container">
+        <div class="section-label">Project Overview</div>
+        <h2>B2B Digital Marketing & LinkedIn Management</h2>
+
+        <p class="intro">
+          Managing digital marketing activities end to end, from strategy
+          and content planning to copywriting, creative design, and publishing.
+          The focus is on communicating Techstruct's value to training
+          organizations and business partners through relevant, consistent
+          LinkedIn content.
+        </p>
+
+        <div class="panel">
+          <h3>My Responsibilities</h3>
+
+          <div class="responsibilities">
+            <div class="responsibility">
+              <span>01 / STRATEGY</span>
+              Digital Marketing Strategy & Content Calendars
+            </div>
+
+            <div class="responsibility">
+              <span>02 / CONTENT</span>
+              LinkedIn Content Strategy & Copywriting
+            </div>
+
+            <div class="responsibility">
+              <span>03 / CREATIVE</span>
+              Creative Design Using Canva & AI Tools
+            </div>
+
+            <div class="responsibility">
+              <span>04 / MANAGEMENT</span>
+              Content Publishing & Brand Consistency
+            </div>
+          </div>
+
+          <div class="links">
+            <a href="https://www.linkedin.com/company/techstruct-training"
+               target="_blank" rel="noopener noreferrer">
+              LinkedIn Company Page ↗
+            </a>
+
+            <a href="https://techstruct.net/"
+               target="_blank" rel="noopener noreferrer">
+              Official Website ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="my-work">
+      <div class="container">
+        <div class="section-label">Selected Work</div>
+        <h2>Strategy, content & creative execution.</h2>
+
+        <p class="intro">
+          A selection of marketing materials created for Techstruct.
+          Replace the sample image paths below with your own project visuals.
+        </p>
+
+        <div class="gallery">
+
+          <div class="gallery-card">
+            <img src="../images/techstruct-01.jpg"
+                 alt="Techstruct LinkedIn content example"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+            <div class="placeholder" style="display:none;">
+              <strong>LinkedIn Content</strong>
+              <small>Add your image: images/techstruct-01.jpg</small>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="../images/techstruct-02.jpg"
+                 alt="Techstruct content strategy example"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+            <div class="placeholder" style="display:none;">
+              <strong>Content Strategy</strong>
+              <small>Add your image: images/techstruct-02.jpg</small>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="../images/techstruct-03.jpg"
+                 alt="Techstruct creative design example"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+            <div class="placeholder" style="display:none;">
+              <strong>Creative Design</strong>
+              <small>Add your image: images/techstruct-03.jpg</small>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="../images/techstruct-04.jpg"
+                 alt="Techstruct content calendar example"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+            <div class="placeholder" style="display:none;">
+              <strong>Content Calendar</strong>
+              <small>Add your image: images/techstruct-04.jpg</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-label">Performance & Reporting</div>
+        <h2>Analytics and campaign evidence.</h2>
+
+        <p class="intro">
+          This section is reserved for actual performance reports, analytics
+          screenshots, and documented results. Add evidence when it is available.
+        </p>
+
+        <div class="gallery">
+
+          <div class="gallery-card">
+            <img src="../images/techstruct-report-01.jpg"
+                 alt="Techstruct analytics report"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+            <div class="placeholder" style="display:none;">
+              <strong>LinkedIn Analytics</strong>
+              <small>Add your image: images/techstruct-report-01.jpg</small>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="../images/techstruct-report-02.jpg"
+                 alt="Techstruct performance report"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+            <div class="placeholder" style="display:none;">
+              <strong>Performance Report</strong>
+              <small>Add your image: images/techstruct-report-02.jpg</small>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="note">
+          Performance metrics will be added when verified data is available.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="panel">
+          <div class="section-label">More Projects</div>
+          <h2>Explore more of my work.</h2>
+
+          <p class="intro">
+            Return to the main portfolio to explore projects across different
+            industries, from food exports and education to accounting and mental health.
+          </p>
+
+          <a class="btn btn-primary" href="../index.html#experience">
+            Back to All Projects →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Madonna Nasser · Digital Marketing Specialist</p>
+      <p>Strategy · Content · Creative · Performance</p>
+    </div>
+  </footer>
+
+</body>
+</html>
