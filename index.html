@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Madonna Nasser — Digital Marketer specializing in digital strategy, creative content, paid advertising, and SEO.">
+  <title>Madonna Nasser | Digital Marketing Portfolio</title>
+
+  <style>
+    :root {
+      --mauve: #34263D;
+      --pink: #F4EAF0;
+      --rose: #C68CA5;
+      --lilac: #D8C7E8;
+      --white: #FFFFFF;
+      --text: #514852;
+      --muted: #817581;
+      --line: #E9DFE8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #FFFCFE;
+      color: var(--mauve);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.7px;
+    }
+
+    .brand span { color: var(--rose); }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 23px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .nav-links a:hover { color: var(--rose); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 64px;
+      padding: 86px 0 100px;
+    }
+
+    .eyebrow {
+      color: #99647F;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.08;
+      letter-spacing: -2.8px;
+      margin-bottom: 24px;
+    }
+
+    h1 em {
+      color: #AD7895;
+      font-style: normal;
+    }
+
+    .hero-copy {
+      color: var(--text);
+      font-size: 16px;
+      max-width: 540px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 22px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--mauve);
+      color: white;
+    }
+
+    .btn-primary:hover { background: #513C5C; }
+
+    .btn-secondary {
+      border: 1px solid #CDBCCB;
+      background: transparent;
+    }
+
+    .btn-secondary:hover { background: var(--pink); }
+
+    .portrait-frame {
+      background: var(--pink);
+      border: 1px solid var(--line);
+      padding: 14px;
+      border-radius: 12px;
+      position: relative;
+      max-width: 390px;
+      margin-left: auto;
+      width: 100%;
+    }
+
+    .portrait {
+      min-height: 430px;
+      width: 100%;
+      background: linear-gradient(145deg, #E7D9E8, #F5E9EF 55%, #D8C7E8);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      color: var(--mauve);
+    }
+
+    .portrait strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .portrait small { color: #756477; }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      border-radius: 7px;
+    }
+
+    .section {
+      padding: 85px 0;
+      scroll-margin-top: 25px;
+    }
+
+    .section-tint { background: var(--pink); }
+
+    .section-heading {
+      max-width: 670px;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      letter-spacing: -1.5px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+    }
+
+    .about-grid p {
+      color: var(--text);
+      margin-bottom: 17px;
+    }
+
+    .focus-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .focus-card h3 {
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .tag {
+      background: #F8F3F8;
+      border: 1px solid #E9DFEA;
+      color: #5E4864;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      min-height: 265px;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px #34263D0D;
+    }
+
+    .project-number {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #A16F8B;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      font-size: 22px;
+      margin-bottom: 7px;
+    }
+
+    .project-type {
+      color: #9B6B86;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .project-link {
+      margin-top: auto;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .project-link span { color: #AD7895; }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .result-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .result-label {
+      color: #8B6580;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .result-number {
+      font-size: clamp(36px, 5vw, 48px);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin: 14px 0 10px;
+    }
+
+    .result-card p {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .result-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill {
+      padding: 19px;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .contact-panel {
+      padding: 45px;
+      border-radius: 12px;
+      background: var(--mauve);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .contact-panel p {
+      color: #E8DCE9;
+      font-size: 14px;
+    }
+
+    .contact-panel .btn {
+      background: var(--lilac);
+      color: var(--mauve);
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 25px 0;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 58px 0 70px;
+        gap: 35px;
+      }
+
+      .portrait-frame {
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .portrait { min-height: 330px; }
+
+      .about-grid,
+      .project-grid,
+      .results-grid { grid-template-columns: 1fr; }
+
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+      .contact-panel {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 14px; }
+      .section { padding: 65px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">Madonna<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#results">Results</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container hero" id="home">
+      <div>
+        <p class="eyebrow">Digital Marketing Portfolio</p>
+        <h1>Strategy meets <em>creative impact.</em></h1>
+        <p class="hero-copy">
+          I'm Madonna Nasser, a Digital Marketer with 2 years of hands-on
+          experience in digital strategy, content creation, creative design,
+          paid advertising, and SEO.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#projects">Explore My Work</a>
+          <a class="btn btn-secondary" href="#contact">Let's Connect</a>
+        </div>
+      </div>
+
+      <div class="portrait-frame">
+        <div class="portrait">
+          <!-- Replace this placeholder with your portrait image -->
+          <!-- Example: <img src="images/madonna.jpg" alt="Madonna Nasser"> -->
+          <div>
+            <strong>Your Portrait Goes Here</strong>
+            <small>Add your professional photo to this space.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A Little About Me</p>
+          <h2>Creative thinking, backed by strategy.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>
+              I'm a Digital Marketer with 2 years of hands-on experience
+              turning business goals into strategic content, creative
+              campaigns, and performance-driven marketing activities.
+            </p>
+            <p>
+              My expertise spans digital marketing strategy, content planning,
+              copywriting, creative design using Canva and AI tools, paid
+              advertising across Meta and Google Ads, SEO, and social media
+              management.
+            </p>
+            <p>
+              I combine creativity with strategic thinking to build marketing
+              activities that connect with the right audience and support
+              measurable business growth.
+            </p>
+          </div>
+
+          <div class="focus-card">
+            <h3>What I Bring to a Project</h3>
+            <div class="tag-list">
+              <span class="tag">Strategy</span>
+              <span class="tag">Content Planning</span>
+              <span class="tag">Copywriting</span>
+              <span class="tag">Creative Design</span>
+              <span class="tag">Paid Advertising</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Social Media</span>
+              <span class="tag">Performance Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Projects</p>
+          <h2>Different industries. Strategic thinking.</h2>
+          <p>
+            A selection of marketing work across B2B, education, mental
+            wellness, and professional services.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-number">PROJECT 01</div>
+            <h3>Techstruct</h3>
+            <div class="project-type">B2B Digital Marketing & LinkedIn Management</div>
+            <p>
+              End-to-end marketing activities including strategy, content
+              calendars, copywriting, creative design, and LinkedIn publishing.
+            </p>
+            <a class="project-link" href="#techstruct">Explore Project <span>↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 02</div>
+            <h3>Safe Food Egypt</h3>
+            <div class="project-type">B2B Export Marketing & SEO</div>
+            <p>
+              Buyer-focused content supporting export positioning, website
+              article publishing, and SEO-focused content.
+            </p>
+            <a class="project-link" href="#safe-food">Explore Project <span>↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 03</div>
+            <h3>Mettamena</h3>
+            <div class="project-type">Creative Content & Paid Advertising</div>
+            <p>
+              Carousel copywriting, visual design, and paid advertising
+              activities for a women's mental wellness platform.
+            </p>
+            <a class="project-link" href="#mettamena">Explore Project <span>↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 04</div>
+            <h3>Mr. Math</h3>
+            <div class="project-type">Education Marketing & Meta Ads</div>
+            <p>
+              Social media content and advertising campaigns designed to
+              reach relevant student audiences and support enrollment goals.
+            </p>
+            <a class="project-link" href="#mr-math">Explore Project <span>↗</span></a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 05</div>
+            <h3>JMG Accounting</h3>
+            <div class="project-type">Digital Marketing Strategy & Paid Advertising</div>
+            <p>
+              Monthly marketing strategies, content planning, copywriting,
+              scripts, and Meta advertising activities.
+            </p>
+            <a class="project-link" href="#jmg">Explore Project <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="results">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Campaign Highlights</p>
+          <h2>Marketing work with measurable outcomes.</h2>
+          <p>
+            Selected figures reported from campaign experience. Results
+            depend on the campaign, offer, audience, and measurement period.
+          </p>
+        </div>
+
+        <div class="results-grid">
+          <article class="result-card">
+            <div class="result-label">Mr. Math · Campaign Revenue</div>
+            <div class="result-number">EGP 8,000</div>
+            <p>
+              Reported revenue generated through the campaign, with an
+              advertising spend of EGP 1,400.
+            </p>
+            <p class="result-note">
+              Reported revenue and ad spend; figures should be supported
+              by the relevant campaign records.
+            </p>
+          </article>
+
+          <article class="result-card">
+            <div class="result-label">Mettamena · First Month</div>
+            <div class="result-number">80 Bookings</div>
+            <p>
+              Reported bookings during the first month. Session prices ranged
+              from EGP 450 to EGP 1,500, and some clients booked three-session
+              packages.
+            </p>
+            <p class="result-note">
+              Booking count is not the same as confirmed revenue. Package
+              purchases and collected payments should be verified separately.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Core Skills</p>
+          <h2>From planning to execution.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill">Digital Marketing Strategy</div>
+          <div class="skill">Content Calendars</div>
+          <div class="skill">Copywriting & Scripts</div>
+          <div class="skill">Canva & AI-Assisted Design</div>
+          <div class="skill">Meta Ads</div>
+          <div class="skill">Google Ads</div>
+          <div class="skill">TikTok Ads</div>
+          <div class="skill">SEO-Focused Content</div>
+          <div class="skill">Website Content Publishing</div>
+          <div class="skill">Social Media Management</div>
+          <div class="skill">Campaign Monitoring</div>
+          <div class="skill">Content Strategy</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="project-details">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Project Experience</p>
+          <h2>A closer look at my role.</h2>
+          <p>
+            These summaries describe the work performed. Visual examples,
+            published links, and supporting evidence can be added to each
+            project as they are prepared.
+          </p>
+        </div>
+
+        <article class="focus-card" id="techstruct" style="margin-bottom:18px; scroll-margin-top:20px;">
+          <p class="eyebrow">Project 01</p>
+          <h3>Techstruct — B2B Digital Marketing & LinkedIn Management</h3>
+          <p>
+            Managing digital marketing activities end to end, from strategy
+            and content planning to copywriting, creative design, and publishing.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Strategy & Calendars</span>
+            <span class="tag">LinkedIn Copywriting</span>
+            <span class="tag">Canva & AI Design</span>
+            <span class="tag">Publishing</span>
+          </div>
+          <p class="result-note">Selected designs, posts, and content calendars can be added here.</p>
+        </article>
+
+        <article class="focus-card" id="safe-food" style="margin-bottom:18px; scroll-margin-top:20px;">
+          <p class="eyebrow">Project 02</p>
+          <h3>Safe Food Egypt — B2B Export Marketing & SEO</h3>
+          <p>
+            Developing buyer-focused content that supports the company's B2B
+            export positioning on social media, alongside website content
+            management and SEO-focused articles.
+          </p>
+          <div class="tag-list">
+            <span class="tag">B2B Content Strategy</span>
+            <span class="tag">Website Articles</span>
+            <span class="tag">SEO Content</span>
+            <span class="tag">International Buyers</span>
+          </div>
+          <p class="result-note">Published article links and selected content examples can be added here.</p>
+        </article>
+
+        <article class="focus-card" id="mettamena" style="margin-bottom:18px; scroll-margin-top:20px;">
+          <p class="eyebrow">Project 03</p>
+          <h3>Mettamena — Creative Content & Paid Advertising</h3>
+          <p>
+            Creating engaging carousel content and visual designs while
+            focusing on paid advertising across Meta and TikTok.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Carousel Copywriting</span>
+            <span class="tag">Canva Design</span>
+            <span class="tag">Meta Ads</span>
+            <span class="tag">TikTok Ads</span>
+          </div>
+          <p class="result-note">First-month reported outcome: 80 bookings. Session prices ranged from EGP 450 to EGP 1,500; some bookings included three-session packages.</p>
+        </article>
+
+        <article class="focus-card" id="mr-math" style="margin-bottom:18px; scroll-margin-top:20px;">
+          <p class="eyebrow">Project 04</p>
+          <h3>Mr. Math — Education Marketing & Meta Ads</h3>
+          <p>
+            Developing social media content and advertising campaigns to
+            support educational marketing goals and reach relevant student
+            audiences.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Facebook Content</span>
+            <span class="tag">Social Media Design</span>
+            <span class="tag">Meta Ads Campaigns</span>
+            <span class="tag">Performance Monitoring</span>
+          </div>
+          <p class="result-note">Reported campaign revenue: EGP 8,000, with EGP 1,400 in advertising spend.</p>
+        </article>
+
+        <article class="focus-card" id="jmg" style="scroll-margin-top:20px;">
+          <p class="eyebrow">Project 05</p>
+          <h3>JMG Accounting — Digital Marketing Strategy & Paid Advertising</h3>
+          <p>
+            Planning and executing digital marketing activities to strengthen
+            the brand's online presence and communicate its accounting
+            services effectively.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Monthly Strategy</span>
+            <span class="tag">Content Calendars</span>
+            <span class="tag">Copywriting & Scripts</span>
+            <span class="tag">Meta Ads</span>
+          </div>
+          <p class="result-note">Selected strategies, content examples, and campaign evidence can be added here.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow" style="color:#D8C7E8;">Let's Work Together</p>
+            <h2>Have a project in mind?</h2>
+            <p>
+              I'm open to Digital Marketing Specialist opportunities and
+              freelance collaborations.
+            </p>
+          </div>
+          <!-- Replace the placeholder email with your professional email -->
+          <a class="btn" href="mailto:YOUR-EMAIL@example.com">Get in Touch ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Madonna Nasser</span>
+      <span>Digital Marketing Portfolio</span>
+    </div>
+  </footer>
+</body>
+</html>
