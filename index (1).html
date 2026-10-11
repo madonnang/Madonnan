@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Madonna Nasser — Digital Marketing Specialist portfolio, featuring strategy, content, paid advertising, SEO, and creative campaigns.">
+<meta name="theme-color" content="#24142f">
+<title>Madonna Nasser | Digital Marketing Portfolio</title>
+<style>
+:root{
+  --bg:#1c1027;--bg2:#2c1737;--pink:#d77da6;--pink2:#f0b6d0;
+  --rose:#a84e7b;--cream:#fff8fc;--muted:#c9b7cc;--line:rgba(255,235,248,.15);
+  --panel:rgba(255,255,255,.055);--shadow:0 24px 70px rgba(7,2,12,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--cream);line-height:1.7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 15% 20%,rgba(166,68,119,.30),transparent 38%),radial-gradient(ellipse at 85% 68%,rgba(110,66,130,.22),transparent 42%),linear-gradient(135deg,#21122e,#301b3a 52%,#180f25)}
+a{color:inherit;text-decoration:none}
+button,a{-webkit-tap-highlight-color:transparent}
+img{max-width:100%;display:block}
+.container{width:min(1160px,90%);margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(28,16,39,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{font-family:Georgia,serif;font-weight:700;font-size:25px;letter-spacing:-.8px}
+.brand span{color:var(--pink)}
+.nav-links{display:flex;align-items:center;gap:25px;font-size:13px;color:#e6d9e9}
+.nav-links a:hover{color:var(--pink2)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:9px;padding:8px 12px;font-size:20px}
+.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:.82fr 1.18fr;align-items:center;gap:clamp(35px,7vw,95px);padding:80px 0 95px}
+.portrait-wrap{position:relative;justify-self:center;width:min(100%,390px);aspect-ratio:1;border-radius:50%;padding:10px;background:linear-gradient(140deg,#f0b6d0,#9e4e7d 45%,#5a376d);box-shadow:0 0 0 1px rgba(255,255,255,.16),0 28px 80px rgba(0,0,0,.35)}
+.portrait-inner{height:100%;width:100%;border-radius:50%;overflow:hidden;border:5px solid rgba(34,17,44,.85);background:radial-gradient(circle at 35% 25%,#68405e,#2b1836 65%);display:grid;place-items:center;text-align:center;color:#ead9e8;padding:25px;position:relative}
+.portrait-inner img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.portrait-inner .placeholder{max-width:210px}
+.portrait-inner strong{display:block;font-family:Georgia,serif;font-size:23px;margin-bottom:8px}
+.portrait-inner small{font-size:12px;color:#d6c1d8}
+.orbit{position:absolute;inset:-19px;border:1px solid rgba(240,182,208,.32);border-radius:50%;transform:rotate(-18deg)}
+.orbit:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--pink2);top:15%;right:14%;box-shadow:0 0 22px var(--pink)}
+.eyebrow{color:var(--pink2);font-size:11px;text-transform:uppercase;letter-spacing:3px;font-weight:800;margin-bottom:18px}
+h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(44px,6.2vw,78px);letter-spacing:-2.8px;line-height:1.05;margin-bottom:16px}
+h1 em{font-style:normal;color:var(--pink2)}
+.job-title{font-size:clamp(17px,2vw,22px);color:#e7c9dc;font-weight:600;margin-bottom:19px}
+.hero-copy{font-size:15px;color:#d0bfd4;max-width:600px;margin-bottom:29px}
+.buttons{display:flex;flex-wrap:wrap;gap:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:999px;font-size:13px;font-weight:800;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:linear-gradient(120deg,#efb1cc,#c96f9b);color:#28152f;box-shadow:0 10px 30px rgba(205,103,151,.18)}
+.btn-secondary{border:1px solid rgba(244,220,239,.36);background:rgba(255,255,255,.04)}
+.btn-secondary:hover{border-color:var(--pink2);background:rgba(255,255,255,.08)}
+.quick-note{font-size:11px;color:#ad9bb5;margin-top:25px;letter-spacing:.3px}
+.section{padding:95px 0}
+.section.alt{background:linear-gradient(120deg,rgba(255,255,255,.035),rgba(190,98,145,.06));border-block:1px solid rgba(255,255,255,.055)}
+.section-heading{max-width:720px;margin-bottom:38px}
+.section-heading h2{font:500 clamp(32px,4vw,49px)/1.15 Georgia,serif;letter-spacing:-1.4px;margin-bottom:14px}
+.section-heading p:not(.eyebrow){color:var(--muted);font-size:14px}
+.sector-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sector-card{position:relative;min-height:245px;border:1px solid var(--line);border-radius:17px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.025));padding:25px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;transition:transform .25s,border-color .25s,box-shadow .25s}
+.sector-card:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--card-bg,radial-gradient(circle at 75% 18%,rgba(215,125,166,.32),transparent 44%))}
+.sector-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(26,13,35,.05),rgba(26,13,35,.94))}
+.sector-card:hover{transform:translateY(-6px);border-color:rgba(240,182,208,.6);box-shadow:var(--shadow)}
+.sector-number{position:absolute;top:20px;left:22px;color:#f0b6d0;font-size:11px;letter-spacing:2px;font-weight:800}
+.sector-symbol{position:absolute;right:24px;top:20px;font-size:32px;color:rgba(255,230,244,.8)}
+.sector-card h3{font:500 26px/1.15 Georgia,serif;margin-bottom:8px}
+.sector-card p{font-size:12px;color:#d2bfd5;margin-bottom:17px}
+.sector-cta{font-size:12px;font-weight:800;color:var(--pink2)}
+.detail-section{padding:86px 0;border-bottom:1px solid var(--line)}
+.detail-header{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:30px}
+.detail-header h2{font:500 clamp(34px,4.5vw,54px)/1.1 Georgia,serif;letter-spacing:-1.5px;margin-bottom:9px}
+.detail-header p{color:var(--muted);font-size:14px}
+.profile-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}
+.profile-link{font-size:12px;border:1px solid var(--line);padding:9px 13px;border-radius:999px;color:#f0d7e6}
+.profile-link:hover{border-color:var(--pink2);background:rgba(255,255,255,.06)}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.content-panel{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:25px}
+.content-panel h3{font-size:16px;margin-bottom:14px}
+.content-panel p,.content-panel li{color:#d0bfd4;font-size:13px}
+.content-panel ul{padding-left:19px;display:grid;gap:8px}
+.placeholder-note{margin-top:15px;padding:13px 15px;border:1px dashed rgba(240,182,208,.36);border-radius:9px;color:#bda9c3;font-size:12px}
+.work-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:20px}
+.work-image{aspect-ratio:4/3;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(145deg,rgba(215,125,166,.16),rgba(255,255,255,.035));display:grid;place-items:center;text-align:center;padding:16px;color:#c6b2cb;font-size:12px;position:relative}
+.work-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.results-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.metric{border-radius:13px;border:1px solid rgba(240,182,208,.24);background:rgba(180,84,130,.10);padding:22px}
+.metric-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--pink2);font-weight:800}
+.metric strong{display:block;font-size:clamp(28px,4vw,40px);letter-spacing:-1px;margin:7px 0}
+.metric p{font-size:12px;color:#d0bfd4}
+.analytics-box{margin-top:15px;border:1px dashed rgba(240,182,208,.36);border-radius:12px;padding:18px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.analytics-box p{font-size:12px;color:#c9b7cc}
+.analytics-box strong{display:block;color:#f6dce9;font-size:13px;margin-bottom:4px}
+.analytics-box a{font-size:12px;color:var(--pink2);font-weight:800;white-space:nowrap}
+.contact-panel{border:1px solid rgba(240,182,208,.24);border-radius:22px;padding:clamp(25px,5vw,52px);background:linear-gradient(125deg,rgba(180,84,130,.18),rgba(255,255,255,.045));box-shadow:var(--shadow)}
+.contact-panel h2{font:500 clamp(34px,4vw,48px)/1.15 Georgia,serif;margin-bottom:12px}
+.contact-panel>p{color:var(--muted);font-size:14px;max-width:650px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:29px}
+.contact-item{display:flex;align-items:center;gap:13px;min-width:0;padding:17px;border:1px solid var(--line);border-radius:13px;background:rgba(15,7,23,.18);transition:border-color .2s}
+.contact-item:hover{border-color:var(--pink2)}
+.contact-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:rgba(215,125,166,.16);color:var(--pink2);font-size:19px}
+.contact-item small{display:block;color:#bca8c2;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.contact-item strong{display:block;font-size:12px;overflow-wrap:anywhere;font-weight:600}
+footer{padding:25px 0;color:#a995b0;font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.back-top{color:var(--pink2)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;min-height:auto;padding:62px 0 78px;gap:48px}.hero-copy{max-width:680px}.portrait-wrap{grid-row:1;width:min(70vw,310px)}.hero-copy-wrap{grid-row:2}.sector-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid{grid-template-columns:1fr}.detail-header{align-items:flex-start;flex-direction:column}.nav-links{gap:15px}}
+@media(max-width:600px){.container{width:88%}nav{min-height:70px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;padding:20px 6%;background:#24142f;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.hero{padding-top:46px}.portrait-wrap{width:min(68vw,270px)}h1{letter-spacing:-1.8px}.section{padding:70px 0}.sector-grid{grid-template-columns:1fr}.sector-card{min-height:205px}.detail-grid{grid-template-columns:1fr}.work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.results-row{grid-template-columns:1fr}.analytics-box{align-items:flex-start;flex-direction:column}.contact-panel{padding:25px 20px}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="container" aria-label="Main navigation">
+    <a class="brand" href="#home">Madonna<span>.</span></a>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <div class="nav-links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+<section class="container hero" id="home">
+  <div class="portrait-wrap">
+    <div class="orbit"></div>
+    <div class="portrait-inner">
+      <!-- Add your photo at images/madonna.jpg, or change the path below. -->
+      <img src="images/madonna.jpg" alt="Madonna Nasser" onerror="this.remove()">
+      <div class="placeholder"><strong>Your Portrait</strong><small>Add your professional photo as <b>images/madonna.jpg</b></small></div>
+    </div>
+  </div>
+  <div class="hero-copy-wrap">
+    <p class="eyebrow">Digital Marketing Portfolio</p>
+    <h1>Madonna <em>Nasser.</em></h1>
+    <p class="job-title">Digital Marketing Specialist | Meta Ads &amp; Google Ads</p>
+    <p class="hero-copy">I turn business goals into thoughtful marketing strategies, creative content, and performance-focused campaigns. Explore selected work across different industries, from B2B technical training to education, food exports, mental wellness, accounting, and skincare.</p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#contact">✉ Get in Touch <span>↗</span></a>
+      <a class="btn btn-secondary" href="#projects">Explore My Projects <span>↓</span></a>
+    </div>
+    <p class="quick-note">STRATEGY · CONTENT · CREATIVE · PERFORMANCE</p>
+  </div>
+</section>
+
+<section class="section alt" id="about">
+ <div class="container">
+  <div class="section-heading"><p class="eyebrow">A Little About Me</p><h2>Creative thinking, backed by strategy.</h2><p>My work combines planning, content creation, creative design using Canva and AI tools, paid advertising, SEO-focused content, and social media management. Select an industry below to explore the work, responsibilities, creative samples, campaign results, and analytics.</p></div>
+ </div>
+</section>
+
+<section class="section" id="projects">
+ <div class="container">
+  <div class="section-heading"><p class="eyebrow">Selected Projects</p><h2>Explore my work by industry.</h2><p>Choose a field to jump directly to its project details. Each project includes dedicated spaces for responsibilities, visuals, results, and campaign evidence.</p></div>
+  <div class="sector-grid">
+   <a class="sector-card" href="#technical" style="--card-bg:radial-gradient(circle at 75% 20%,rgba(107,155,211,.35),transparent 48%)"><span class="sector-number">01 / INDUSTRY</span><span class="sector-symbol">⌘</span><h3>Technical Training</h3><p>B2B marketing · LinkedIn · Content strategy</p><span class="sector-cta">View Techstruct project ↗</span></a>
+   <a class="sector-card" href="#food" style="--card-bg:radial-gradient(circle at 75% 20%,rgba(202,159,94,.32),transparent 48%)"><span class="sector-number">02 / INDUSTRY</span><span class="sector-symbol">✳</span><h3>Food Exports</h3><p>B2B content · SEO · International buyers</p><span class="sector-cta">View Safe Food project ↗</span></a>
+   <a class="sector-card" href="#education" style="--card-bg:radial-gradient(circle at 75% 20%,rgba(132,117,206,.35),transparent 48%)"><span class="sector-number">03 / INDUSTRY</span><span class="sector-symbol">∑</span><h3>Educational</h3><p>Education marketing · Meta Ads</p><span class="sector-cta">View education project ↗</span></a>
+   <a class="sector-card" href="#accounting" style="--card-bg:radial-gradient(circle at 75% 20%,rgba(102,157,147,.32),transparent 48%)"><span class="sector-number">04 / INDUSTRY</span><span class="sector-symbol">＋</span><h3>Accounting Office</h3><p>Professional services · Strategy · Ads</p><span class="sector-cta">View JMG project ↗</span></a>
+   <a class="sector-card" href="#mental-health" style="--card-bg:radial-gradient(circle at 75% 20%,rgba(215,125,166,.37),transparent 48%)"><span class="sector-number">05 / INDUSTRY</span><span class="sector-symbol">♡</span><h3>Mental Health</h3><p>Creative content · Paid campaigns</p><span class="sector-cta">View Mettamena project ↗</span></a>
+   <a class="sector-card" href="#skincare" style="--card-bg:radial-gradient(circle at 75% 20%,rgba(202,130,156,.34),transparent 48%)"><span class="sector-number">06 / INDUSTRY</span><span class="sector-symbol">✧</span><h3>Skincare</h3><p>Social media · Creative design · Organic growth</p><span class="sector-cta">View Lumiara project ↗</span></a>
+  </div>
+ </div>
+</section>
+
+<!-- PROJECT TEMPLATE: replace the sample placeholders with your actual screenshots and verified campaign data. -->
+<section class="section alt detail-section" id="technical">
+ <div class="container">
+  <div class="detail-header"><div><p class="eyebrow">Project 01 · Technical Training</p><h2>Techstruct</h2><p>B2B Digital Marketing &amp; LinkedIn Management</p><div class="profile-links"><a class="profile-link" href="https://www.linkedin.com/company/techstruct-training" target="_blank" rel="noopener">LinkedIn Company Profile ↗</a></div></div><a class="btn btn-secondary" href="#projects">← All industries</a></div>
+  <div class="detail-grid">
+   <div class="content-panel"><h3>Responsibilities</h3><ul><li>Digital marketing planning and content calendars.</li><li>LinkedIn post copywriting and content development.</li><li>Creative design using Canva and AI tools.</li><li>Publishing and presenting technical-training topics for a B2B audience.</li></ul><div class="placeholder-note">Add further responsibilities here if relevant to your role.</div></div>
+   <div class="content-panel"><h3>Campaign Results &amp; Insights</h3><p>Use this space to explain outcomes, audience response, engagement, reach, clicks, or leads where you have verified evidence.</p><div class="analytics-box"><div><strong>Analytics / performance evidence</strong><p>Add LinkedIn analytics screenshots or a short case-study summary.</p></div><a href="#contact">Discuss project ↗</a></div></div>
+  </div>
+  <div class="work-gallery"><div class="work-image">Add LinkedIn post image<br><small>images/techstruct-01.jpg</small></div><div class="work-image">Add carousel / document<br><small>images/techstruct-02.jpg</small></div><div class="work-image">Add content calendar<br><small>images/techstruct-03.jpg</small></div></div>
+ </div>
+</section>
+
+<section class="section detail-section" id="food">
+ <div class="container">
+  <div class="detail-header"><div><p class="eyebrow">Project 02 · Food Exports</p><h2>Safe Food</h2><p>B2B Export Marketing &amp; SEO Content</p><div class="profile-links"><a class="profile-link" href="https://www.safefoodegy.com/" target="_blank" rel="noopener">Website ↗</a><a class="profile-link" href="https://eg.linkedin.com/company/safe-food-" target="_blank" rel="noopener">LinkedIn Company Profile ↗</a></div></div><a class="btn btn-secondary" href="#projects">← All industries</a></div>
+  <div class="detail-grid"><div class="content-panel"><h3>Responsibilities</h3><ul><li>Buyer-focused B2B content supporting export positioning.</li><li>Website content management and article publishing.</li><li>SEO-focused article content.</li><li>Content designed to communicate with international buyers.</li></ul></div><div class="content-panel"><h3>Results &amp; SEO Evidence</h3><p>Add verified website performance, search visibility, organic clicks, impressions, or content outcomes when available.</p><div class="analytics-box"><div><strong>Website / SEO analytics</strong><p>Space for Search Console, website analytics, or article performance screenshots.</p></div><a href="#contact">View evidence ↗</a></div></div></div>
+  <div class="work-gallery"><div class="work-image">Add social content image</div><div class="work-image">Add published article screenshot</div><div class="work-image">Add SEO analytics screenshot</div></div>
+ </div>
+</section>
+
+<section class="section alt detail-section" id="education">
+ <div class="container">
+  <div class="detail-header"><div><p class="eyebrow">Project 03 · Educational</p><h2>Mr George Younan Math</h2><p>Education Marketing &amp; Meta Ads</p><div class="profile-links"><!-- Add the official page URL here when ready. --><span class="profile-link">Facebook page link can be added</span></div></div><a class="btn btn-secondary" href="#projects">← All industries</a></div>
+  <div class="detail-grid"><div class="content-panel"><h3>Responsibilities</h3><ul><li>Creating and managing the Facebook page content.</li><li>Developing social media creative and educational messaging.</li><li>Planning and running three advertising campaigns.</li><li>Campaign targeting focused on local primary-school students and offline lessons.</li></ul></div><div class="content-panel"><h3>Campaign Results</h3><div class="results-row"><div class="metric"><span class="metric-label">Reported revenue</span><strong>EGP 8,000</strong><p>Revenue reported for the campaign period.</p></div><div class="metric"><span class="metric-label">Ad spend</span><strong>EGP 1,400</strong><p>Reported advertising spend.</p></div></div><div class="placeholder-note">Add campaign screenshots and the reporting period so the figures can be interpreted in context.</div></div></div>
+  <div class="work-gallery"><div class="work-image">Add Facebook post design</div><div class="work-image">Add campaign creative</div><div class="work-image">Add Meta Ads results screenshot</div></div>
+ </div>
+</section>
+
+<section class="section detail-section" id="accounting">
+ <div class="container">
+  <div class="detail-header"><div><p class="eyebrow">Project 04 · Accounting Office</p><h2>J M G For Accounting &amp; Auditing And Consulting</h2><p>Digital Marketing Strategy &amp; Paid Advertising</p><div class="profile-links"><a class="profile-link" href="https://www.facebook.com/share/1Aft5WggxW/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook Profile ↗</a></div></div><a class="btn btn-secondary" href="#projects">← All industries</a></div>
+  <div class="detail-grid"><div class="content-panel"><h3>Responsibilities</h3><ul><li>Monthly digital marketing strategy and content planning.</li><li>Content calendars, copywriting, and scripts.</li><li>Creative content for professional accounting services.</li><li>Meta advertising activities and campaign monitoring.</li></ul></div><div class="content-panel"><h3>Results &amp; Campaign Analysis</h3><p>Add verified campaign objectives and outcomes, such as qualified inquiries, cost per message, CTR, or lead quality.</p><div class="analytics-box"><div><strong>Campaign analysis</strong><p>Dedicated space for Ads Manager screenshots and reporting.</p></div><a href="#contact">View evidence ↗</a></div></div></div>
+  <div class="work-gallery"><div class="work-image">Add accounting post design</div><div class="work-image">Add campaign creative</div><div class="work-image">Add Ads Manager analytics</div></div>
+ </div>
+</section>
+
+<section class="section alt detail-section" id="mental-health">
+ <div class="container">
+  <div class="detail-header"><div><p class="eyebrow">Project 05 · Mental Health</p><h2>Mettamena</h2><p>Creative Content &amp; Paid Advertising</p><div class="profile-links"><a class="profile-link" href="https://www.mettamena.com/" target="_blank" rel="noopener">Website ↗</a><a class="profile-link" href="https://www.instagram.com/_mettamena?srtk=ODB1MXVhbnR0dTgz" target="_blank" rel="noopener">Instagram ↗</a></div></div><a class="btn btn-secondary" href="#projects">← All industries</a></div>
+  <div class="detail-grid"><div class="content-panel"><h3>Responsibilities</h3><ul><li>Carousel copywriting and visual content development.</li><li>Creative design using Canva and AI tools.</li><li>Paid advertising activities across Meta and TikTok.</li><li>Campaign monitoring and reviewing audience response.</li></ul></div><div class="content-panel"><h3>Reported First-Month Outcome</h3><div class="metric"><span class="metric-label">Bookings</span><strong>80</strong><p>Reported bookings during the first month. Booking count is not the same as confirmed revenue.</p></div><div class="placeholder-note">Session prices ranged from EGP 450 to EGP 1,500; some clients booked three-session packages. Add verified payments, package breakdowns, and the relevant ad analytics separately.</div></div></div>
+  <div class="work-gallery"><div class="work-image">Add carousel design</div><div class="work-image">Add video / script example</div><div class="work-image">Add campaign analytics</div></div>
+ </div>
+</section>
+
+<section class="section detail-section" id="skincare">
+ <div class="container">
+  <div class="detail-header"><div><p class="eyebrow">Project 06 · Skincare</p><h2>Lumiara Skincare</h2><p>Social Media Content &amp; Creative Design</p></div><a class="btn btn-secondary" href="#projects">← All industries</a></div>
+  <div class="detail-grid"><div class="content-panel"><h3>Responsibilities</h3><ul><li>Creating the skincare Facebook page.</li><li>Designing and publishing social media content.</li><li>Developing creative visuals using Canva and AI tools.</li><li>Supporting organic product discovery and sales.</li></ul></div><div class="content-panel"><h3>Reported Outcome</h3><div class="metric"><span class="metric-label">First month · Organic sales</span><strong>6 orders</strong><p>Six orders reported in the first month without relying on paid advertising for those sales.</p></div><div class="placeholder-note">Add the reporting dates and supporting order records if you plan to publish this result publicly.</div></div></div>
+  <div class="work-gallery"><div class="work-image">Add product post design</div><div class="work-image">Add skincare creative</div><div class="work-image">Add page / order evidence</div></div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container">
+  <div class="contact-panel">
+   <p class="eyebrow">Let's Connect</p><h2>Have a project in mind?</h2><p>I'm open to Digital Marketing Specialist opportunities and freelance collaborations. Reach out through any of the channels below.</p>
+   <div class="contact-grid">
+    <a class="contact-item" href="mailto:madonna.nasserg@gmail.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>madonna.nasserg@gmail.com</strong></span></a>
+    <a class="contact-item" href="tel:+201044464918"><span class="contact-icon">⌕</span><span><small>Mobile</small><strong>01044464918</strong></span></a>
+    <a class="contact-item" href="https://www.linkedin.com/in/madonnanassergad" target="_blank" rel="noopener"><span class="contact-icon">in</span><span><small>LinkedIn</small><strong>linkedin.com/in/madonnanassergad</strong></span></a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="container footer-inner"><span>© 2026 Madonna Nasser · Digital Marketing Portfolio</span><a class="back-top" href="#home">Back to top ↑</a></div></footer>
+<script>
+const toggle=document.querySelector('.menu-toggle');
+const links=document.querySelector('.nav-links');
+toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰';});
+links.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}));
+</script>
+</body>
+</html>
